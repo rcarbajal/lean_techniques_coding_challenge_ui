@@ -40,7 +40,7 @@ namespace LTPhotoAlbumProvider
 			{
 				if (id > 0)
 				{
-					string url = string.Format(Settings.Default.APIUrl, "?id=", id);
+					string url = string.Format("{0}?id={1}", Settings.Default.APIUrl, id);
 					using (HttpResponseMessage response = await client.GetAsync(url))
 					{
 						response.EnsureSuccessStatusCode();
