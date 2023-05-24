@@ -26,7 +26,7 @@ namespace PhotoAlbum
 
 				if (int.TryParse(txtSearch.Text, out int albumId) && albumId > 0)
 				{
-					var photos = (List<Photo>)await PhotoAlbumProvider.GetPhotoAlbum(albumId);
+					var photos = (List<Photo>) await PhotoAlbumProvider.GetPhotoAlbum(albumId);
 					if (photos.Count > 0)
 					{
 						foreach (Photo photo in photos)
